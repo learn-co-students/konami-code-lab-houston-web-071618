@@ -13,4 +13,24 @@ const codes = [
 
 function init() {
   // your code here
+
+  'use strict';
+  let index = 0;
+
+  document.body.addEventListener('keydown', (event) => {
+    const key = event.key;
+    console.log(key)
+
+    if (key === codes[index]) {
+      index++;
+
+      if (index === codes.length) {
+        alert("Hurray!");
+
+        index = 0;
+      }
+    } else {
+      index = 0;
+    }
+  });
 }
